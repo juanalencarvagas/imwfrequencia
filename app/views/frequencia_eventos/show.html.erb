@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id pessoa:</strong>
+  <%= @frequencia_evento.id_pessoa %>
+</p>
+
+<p>
+  <strong>Id evento:</strong>
+  <%= @frequencia_evento.id_evento %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @frequencia_evento.status %>
+</p>
+
+<%= link_to 'Edit', edit_frequencia_evento_path(@frequencia_evento) %> |
+<%= link_to 'Back', frequencia_eventos_path %>

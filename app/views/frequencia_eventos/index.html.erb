@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Frequencia Eventos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id pessoa</th>
+      <th>Id evento</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @frequencia_eventos.each do |frequencia_evento| %>
+      <tr>
+        <td><%= frequencia_evento.id_pessoa %></td>
+        <td><%= frequencia_evento.id_evento %></td>
+        <td><%= frequencia_evento.status %></td>
+        <td><%= link_to 'Show', frequencia_evento %></td>
+        <td><%= link_to 'Edit', edit_frequencia_evento_path(frequencia_evento) %></td>
+        <td><%= link_to 'Destroy', frequencia_evento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Frequencia Evento', new_frequencia_evento_path %>

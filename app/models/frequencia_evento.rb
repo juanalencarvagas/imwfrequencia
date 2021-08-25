@@ -1,0 +1,2 @@
+class FrequenciaEvento < ApplicationRecord
+end

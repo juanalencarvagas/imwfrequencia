@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  cargo: MyString
+  depto: MyString
+
+two:
+  tipo: MyString
+  cargo: MyString
+  depto: MyString

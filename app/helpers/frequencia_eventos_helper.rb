@@ -1,0 +1,2 @@
+module FrequenciaEventosHelper
+end

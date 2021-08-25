@@ -1,0 +1,571 @@
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2021-08-23 19:14:57 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 518)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 4176)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePessoas (20210823221750)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "pessoas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tipo" varchar, "cargo" varchar, "depto" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210823221750"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-23 22:19:37.790112"], ["updated_at", "2021-08-23 22:19:37.790112"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-08-23 19:19:47 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.3ms | Allocations: 786)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3450)
+
+
+Started GET "/" for ::1 at 2021-08-23 19:21:32 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 574)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3456)
+
+
+Started GET "/pessoas" for ::1 at 2021-08-23 19:21:36 -0300
+Processing by PessoasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/index.html.erb within layouts/application
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT "pessoas".* FROM "pessoas"[0m
+  ↳ app/views/pessoas/index.html.erb:16
+  Rendered pessoas/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1193)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/juanalencar/workspace/imwfrequencia/public/packs
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 1481ms
+Built at: 2021-08-23 19:21:39
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2927.3ms | Allocations: 21423)
+Completed 200 OK in 2932ms (Views: 2929.0ms | ActiveRecord: 0.2ms | Allocations: 23269)
+
+
+Started GET "/pessoas/new" for ::1 at 2021-08-23 19:23:02 -0300
+Processing by PessoasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/new.html.erb within layouts/application
+  Rendered pessoas/_form.html.erb (Duration: 69.6ms | Allocations: 6959)
+  Rendered pessoas/new.html.erb within layouts/application (Duration: 71.0ms | Allocations: 7366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.2ms | Allocations: 10203)
+Completed 200 OK in 100ms (Views: 77.3ms | ActiveRecord: 2.0ms | Allocations: 14713)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNomeToPessoas (20210823222637)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pessoas" ADD "nome" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210823222637"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/pessoas/new" for ::1 at 2021-08-23 19:27:30 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PessoasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/new.html.erb within layouts/application
+  Rendered pessoas/_form.html.erb (Duration: 4.1ms | Allocations: 3114)
+  Rendered pessoas/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3673)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 9728)
+Completed 200 OK in 55ms (Views: 42.3ms | ActiveRecord: 0.4ms | Allocations: 17305)
+
+
+Started GET "/pessoas/new" for ::1 at 2021-08-23 19:27:33 -0300
+Processing by PessoasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/new.html.erb within layouts/application
+  Rendered pessoas/_form.html.erb (Duration: 2.4ms | Allocations: 843)
+  Rendered pessoas/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3896)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4373)
+
+
+Started GET "/" for ::1 at 2021-08-23 19:31:12 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.6ms | Allocations: 227)
+Completed 200 OK in 9ms (Views: 7.5ms | Allocations: 1106)
+
+
+Started GET "/" for ::1 at 2021-08-23 19:31:22 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 414)
+Completed 200 OK in 15ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3200)
+
+
+Started GET "/pessoas" for ::1 at 2021-08-23 19:31:27 -0300
+Processing by PessoasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/index.html.erb within layouts/application
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT "pessoas".* FROM "pessoas"[0m
+  ↳ app/views/pessoas/index.html.erb:17
+  Rendered pessoas/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 7276)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.2ms | Allocations: 9287)
+
+
+Started GET "/pessoas/new" for ::1 at 2021-08-23 19:31:29 -0300
+Processing by PessoasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/new.html.erb within layouts/application
+  Rendered pessoas/_form.html.erb (Duration: 9.4ms | Allocations: 3324)
+  Rendered pessoas/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 6657)
+Completed 200 OK in 29ms (Views: 16.5ms | ActiveRecord: 0.6ms | Allocations: 11575)
+
+
+Started POST "/pessoas" for ::1 at 2021-08-23 19:31:50 -0300
+Processing by PessoasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pessoa"=>{"nome"=>"Juan", "tipo"=>"membro", "cargo"=>"colab", "depto"=>"adultos"}, "commit"=>"Create Pessoa"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pessoas_controller.rb:27:in `block in create'
+  [1m[36mPessoa Create (0.4ms)[0m  [1m[32mINSERT INTO "pessoas" ("tipo", "cargo", "depto", "created_at", "updated_at", "nome") VALUES (?, ?, ?, ?, ?, ?)[0m  [["tipo", "membro"], ["cargo", "colab"], ["depto", "adultos"], ["created_at", "2021-08-23 22:31:50.900565"], ["updated_at", "2021-08-23 22:31:50.900565"], ["nome", "Juan"]]
+  ↳ app/controllers/pessoas_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pessoas_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pessoas/1
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms | Allocations: 5400)
+
+
+Started GET "/pessoas/1" for ::1 at 2021-08-23 19:31:50 -0300
+Processing by PessoasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPessoa Load (0.2ms)[0m  [1m[34mSELECT "pessoas".* FROM "pessoas" WHERE "pessoas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pessoas_controller.rb:62:in `set_pessoa'
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/show.html.erb within layouts/application
+  Rendered pessoas/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 3270)
+Completed 200 OK in 62ms (Views: 21.5ms | ActiveRecord: 0.2ms | Allocations: 4981)
+
+
+Started GET "/pessoas" for ::1 at 2021-08-23 19:31:55 -0300
+Processing by PessoasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/index.html.erb within layouts/application
+  [1m[36mPessoa Load (0.1ms)[0m  [1m[34mSELECT "pessoas".* FROM "pessoas"[0m
+  ↳ app/views/pessoas/index.html.erb:17
+  Rendered pessoas/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3785)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 4253)
+
+
+Started GET "/pessoas/1" for ::1 at 2021-08-23 19:31:58 -0300
+Processing by PessoasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPessoa Load (0.4ms)[0m  [1m[34mSELECT "pessoas".* FROM "pessoas" WHERE "pessoas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pessoas_controller.rb:62:in `set_pessoa'
+  Rendering layout layouts/application.html.erb
+  Rendering pessoas/show.html.erb within layouts/application
+  Rendered pessoas/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3614)
+Completed 200 OK in 28ms (Views: 19.8ms | ActiveRecord: 0.4ms | Allocations: 4618)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTipoEventos (20210823223349)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tipo_eventos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tipo" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210823223349"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tipo_eventos" for ::1 at 2021-08-23 19:34:38 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TipoEventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/index.html.erb within layouts/application
+  [1m[36mTipoEvento Load (0.1ms)[0m  [1m[34mSELECT "tipo_eventos".* FROM "tipo_eventos"[0m
+  ↳ app/views/tipo_eventos/index.html.erb:14
+  Rendered tipo_eventos/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1488)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 89.2ms | Allocations: 22171)
+Completed 200 OK in 100ms (Views: 91.8ms | ActiveRecord: 0.1ms | Allocations: 26326)
+
+
+Started GET "/tipo_eventos/new" for ::1 at 2021-08-23 19:34:47 -0300
+Processing by TipoEventosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/new.html.erb within layouts/application
+  Rendered tipo_eventos/_form.html.erb (Duration: 9.9ms | Allocations: 2987)
+  Rendered tipo_eventos/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 6471)
+Completed 200 OK in 33ms (Views: 18.9ms | ActiveRecord: 1.9ms | Allocations: 9662)
+
+
+Started POST "/tipo_eventos" for ::1 at 2021-08-23 19:34:52 -0300
+Processing by TipoEventosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tipo_evento"=>{"tipo"=>"Domingo"}, "commit"=>"Create Tipo evento"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+  [1m[36mTipoEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "tipo_eventos" ("tipo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["tipo", "Domingo"], ["created_at", "2021-08-23 22:34:52.130221"], ["updated_at", "2021-08-23 22:34:52.130221"]]
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/tipo_eventos/1
+Completed 302 Found in 21ms (ActiveRecord: 5.3ms | Allocations: 4333)
+
+
+Started GET "/tipo_eventos/1" for ::1 at 2021-08-23 19:34:52 -0300
+Processing by TipoEventosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTipoEvento Load (0.3ms)[0m  [1m[34mSELECT "tipo_eventos".* FROM "tipo_eventos" WHERE "tipo_eventos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tipo_eventos_controller.rb:62:in `set_tipo_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/show.html.erb within layouts/application
+  Rendered tipo_eventos/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3255)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 4959)
+
+
+Started GET "/tipo_eventos" for ::1 at 2021-08-23 19:35:01 -0300
+Processing by TipoEventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/index.html.erb within layouts/application
+  [1m[36mTipoEvento Load (0.3ms)[0m  [1m[34mSELECT "tipo_eventos".* FROM "tipo_eventos"[0m
+  ↳ app/views/tipo_eventos/index.html.erb:14
+  Rendered tipo_eventos/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4393)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.3ms | Allocations: 4864)
+
+
+Started GET "/tipo_eventos/new" for ::1 at 2021-08-23 19:35:03 -0300
+Processing by TipoEventosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/new.html.erb within layouts/application
+  Rendered tipo_eventos/_form.html.erb (Duration: 3.9ms | Allocations: 506)
+  Rendered tipo_eventos/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 4165)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 4627)
+
+
+Started POST "/tipo_eventos" for ::1 at 2021-08-23 19:35:08 -0300
+Processing by TipoEventosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tipo_evento"=>{"tipo"=>"Semana"}, "commit"=>"Create Tipo evento"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+  [1m[36mTipoEvento Create (0.3ms)[0m  [1m[32mINSERT INTO "tipo_eventos" ("tipo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["tipo", "Semana"], ["created_at", "2021-08-23 22:35:08.716412"], ["updated_at", "2021-08-23 22:35:08.716412"]]
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/tipo_eventos/2
+Completed 302 Found in 14ms (ActiveRecord: 4.4ms | Allocations: 4492)
+
+
+Started GET "/tipo_eventos/2" for ::1 at 2021-08-23 19:35:08 -0300
+Processing by TipoEventosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTipoEvento Load (0.1ms)[0m  [1m[34mSELECT "tipo_eventos".* FROM "tipo_eventos" WHERE "tipo_eventos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tipo_eventos_controller.rb:62:in `set_tipo_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/show.html.erb within layouts/application
+  Rendered tipo_eventos/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3105)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4111)
+
+
+Started GET "/tipo_eventos" for ::1 at 2021-08-23 19:35:11 -0300
+Processing by TipoEventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/index.html.erb within layouts/application
+  [1m[36mTipoEvento Load (0.1ms)[0m  [1m[34mSELECT "tipo_eventos".* FROM "tipo_eventos"[0m
+  ↳ app/views/tipo_eventos/index.html.erb:14
+  Rendered tipo_eventos/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4492)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 4963)
+
+
+Started GET "/tipo_eventos/new" for ::1 at 2021-08-23 19:35:13 -0300
+Processing by TipoEventosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/new.html.erb within layouts/application
+  Rendered tipo_eventos/_form.html.erb (Duration: 1.2ms | Allocations: 505)
+  Rendered tipo_eventos/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4176)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 4638)
+
+
+Started POST "/tipo_eventos" for ::1 at 2021-08-23 19:35:15 -0300
+Processing by TipoEventosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tipo_evento"=>{"tipo"=>"EBD"}, "commit"=>"Create Tipo evento"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+  [1m[36mTipoEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "tipo_eventos" ("tipo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["tipo", "EBD"], ["created_at", "2021-08-23 22:35:15.988111"], ["updated_at", "2021-08-23 22:35:15.988111"]]
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tipo_eventos_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/tipo_eventos/3
+Completed 302 Found in 23ms (ActiveRecord: 4.0ms | Allocations: 4491)
+
+
+Started GET "/tipo_eventos/3" for ::1 at 2021-08-23 19:35:16 -0300
+Processing by TipoEventosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTipoEvento Load (0.1ms)[0m  [1m[34mSELECT "tipo_eventos".* FROM "tipo_eventos" WHERE "tipo_eventos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tipo_eventos_controller.rb:62:in `set_tipo_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/show.html.erb within layouts/application
+  Rendered tipo_eventos/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3105)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4111)
+
+
+Started GET "/tipo_eventos" for ::1 at 2021-08-23 19:35:17 -0300
+Processing by TipoEventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tipo_eventos/index.html.erb within layouts/application
+  [1m[36mTipoEvento Load (0.3ms)[0m  [1m[34mSELECT "tipo_eventos".* FROM "tipo_eventos"[0m
+  ↳ app/views/tipo_eventos/index.html.erb:14
+  Rendered tipo_eventos/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 4581)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.3ms | Allocations: 5042)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEventos (20210823223928)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "eventos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" datetime, "id_tipo_evento" integer, "descricao" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210823223928"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/eventos" for ::1 at 2021-08-23 19:40:03 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.1ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:16
+  Rendered eventos/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.6ms | Allocations: 24911)
+Completed 200 OK in 102ms (Views: 94.8ms | ActiveRecord: 0.1ms | Allocations: 29063)
+
+
+Started GET "/eventos/new" for ::1 at 2021-08-23 19:40:05 -0300
+Processing by EventosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/new.html.erb within layouts/application
+  Rendered eventos/_form.html.erb (Duration: 16.6ms | Allocations: 5678)
+  Rendered eventos/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 6470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 9514)
+Completed 200 OK in 46ms (Views: 27.9ms | ActiveRecord: 1.0ms | Allocations: 13653)
+
+
+Started POST "/eventos" for ::1 at 2021-08-23 19:41:32 -0300
+Processing by EventosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "evento"=>{"data(1i)"=>"2021", "data(2i)"=>"8", "data(3i)"=>"23", "data(4i)"=>"22", "data(5i)"=>"40", "id_tipo_evento"=>"1", "descricao"=>"Teste de evento"}, "commit"=>"Create Evento"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/eventos_controller.rb:27:in `block in create'
+  [1m[36mEvento Create (0.5ms)[0m  [1m[32mINSERT INTO "eventos" ("data", "id_tipo_evento", "descricao", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["data", "2021-08-23 22:40:00"], ["id_tipo_evento", 1], ["descricao", "Teste de evento"], ["created_at", "2021-08-23 22:41:32.970070"], ["updated_at", "2021-08-23 22:41:32.970070"]]
+  ↳ app/controllers/eventos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/eventos_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/eventos/1
+Completed 302 Found in 16ms (ActiveRecord: 3.0ms | Allocations: 5523)
+
+
+Started GET "/eventos/1" for ::1 at 2021-08-23 19:41:32 -0300
+Processing by EventosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos" WHERE "eventos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/eventos_controller.rb:62:in `set_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/show.html.erb within layouts/application
+  Rendered eventos/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3325)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 6613)
+
+
+Started GET "/eventos" for ::1 at 2021-08-23 19:41:35 -0300
+Processing by EventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.1ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:16
+  Rendered eventos/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4467)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 4938)
+
+
+Started GET "/eventos/1" for ::1 at 2021-08-23 19:42:15 -0300
+Processing by EventosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvento Load (0.5ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos" WHERE "eventos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/eventos_controller.rb:62:in `set_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/show.html.erb within layouts/application
+  Rendered eventos/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3180)
+Completed 200 OK in 20ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 4181)
+
+
+Started GET "/eventos/1" for ::1 at 2021-08-23 19:42:34 -0300
+Processing by EventosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos" WHERE "eventos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/eventos_controller.rb:62:in `set_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/show.html.erb within layouts/application
+  Rendered eventos/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3180)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 4182)
+
+
+Started GET "/eventos/1" for ::1 at 2021-08-23 19:42:44 -0300
+Processing by EventosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvento Load (0.2ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos" WHERE "eventos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/eventos_controller.rb:62:in `set_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/show.html.erb within layouts/application
+  Rendered eventos/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3755)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 4773)
+
+
+Started GET "/eventos" for ::1 at 2021-08-23 19:42:46 -0300
+Processing by EventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/index.html.erb within layouts/application
+  [1m[36mEvento Load (0.5ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos"[0m
+  ↳ app/views/eventos/index.html.erb:16
+  Rendered eventos/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 3893)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.5ms | Allocations: 4354)
+
+
+Started GET "/eventos/1" for ::1 at 2021-08-23 19:42:54 -0300
+Processing by EventosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvento Load (0.5ms)[0m  [1m[34mSELECT "eventos".* FROM "eventos" WHERE "eventos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/eventos_controller.rb:62:in `set_evento'
+  Rendering layout layouts/application.html.erb
+  Rendering eventos/show.html.erb within layouts/application
+  Rendered eventos/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3741)
+Completed 200 OK in 28ms (Views: 16.7ms | ActiveRecord: 0.5ms | Allocations: 4742)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFrequenciaEventos (20210823224420)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "frequencia_eventos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "id_pessoa" integer, "id_evento" integer, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210823224420"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/fr" for ::1 at 2021-08-23 19:45:08 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/fr"):
+  
+Started GET "/frequencia_eventos" for ::1 at 2021-08-23 19:45:25 -0300
+Processing by FrequenciaEventosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frequencia_eventos/index.html.erb within layouts/application
+  [1m[36mFrequenciaEvento Load (0.2ms)[0m  [1m[34mSELECT "frequencia_eventos".* FROM "frequencia_eventos"[0m
+  ↳ app/views/frequencia_eventos/index.html.erb:16
+  Rendered frequencia_eventos/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 26271)
+Completed 200 OK in 57ms (Views: 51.1ms | ActiveRecord: 0.2ms | Allocations: 29154)
+
+
+Started GET "/frequencia_eventos/new" for ::1 at 2021-08-23 19:45:30 -0300
+Processing by FrequenciaEventosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frequencia_eventos/new.html.erb within layouts/application
+  Rendered frequencia_eventos/_form.html.erb (Duration: 6.0ms | Allocations: 3146)
+  Rendered frequencia_eventos/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 6626)
+Completed 200 OK in 21ms (Views: 12.3ms | ActiveRecord: 0.6ms | Allocations: 11095)
+
+
+Started GET "/" for ::1 at 2021-08-23 19:47:14 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.2ms | Allocations: 222)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 1093)
+
+
+Started GET "/" for ::1 at 2021-08-23 19:47:21 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanalencar/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 614)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 1674)
+
+
+Started GET "/x" for ::1 at 2021-08-23 19:47:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/x"):
+  

@@ -1,0 +1,32 @@
+<%= form_with(model: frequencia_evento) do |form| %>
+  <% if frequencia_evento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(frequencia_evento.errors.count, "error") %> prohibited this frequencia_evento from being saved:</h2>
+
+      <ul>
+        <% frequencia_evento.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_pessoa %>
+    <%= form.number_field :id_pessoa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_evento %>
+    <%= form.number_field :id_evento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
