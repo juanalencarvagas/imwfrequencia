@@ -7,7 +7,7 @@
 
 <p>
   <strong>Id tipo evento:</strong>
-  <%= @evento.id_tipo_evento %>
+  <%= @evento.tipo_eventos_id %>
 </p>
 
 <p>
@@ -17,3 +17,25 @@
 
 <%= link_to 'Edit', edit_evento_path(@evento) %> |
 <%= link_to 'Back', eventos_path %>
+
+
+<table>
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Tipo</th>
+    <th>Cargo</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @pessoas.each do |pessoa| %>
+    <tr>
+      <td><%= pessoa.nome %></td>
+      <td><%= pessoa.tipo %></td>
+      <td><%= pessoa.cargo %></td>
+     </tr>
+  <% end %>
+</tbody>
+</table>
+<%= link_to 'New Pessoa', new_pessoa_path %>

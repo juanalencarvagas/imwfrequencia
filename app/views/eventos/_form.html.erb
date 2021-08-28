@@ -17,8 +17,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :id_tipo_evento %>
-    <%= form.number_field :id_tipo_evento %>
+    <%= form.select 'tipo_eventos_id', options_for_select(@tipo_evento.collect{ |u| [u.tipo, u.id] }) %>
   </div>
 
   <div class="field">
@@ -29,4 +28,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

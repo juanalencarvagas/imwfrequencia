@@ -10,22 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_224420) do
+ActiveRecord::Schema.define(version: 2021_08_27_231701) do
 
   create_table "eventos", force: :cascade do |t|
     t.datetime "data"
-    t.integer "id_tipo_evento"
     t.text "descricao"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "tipo_eventos_id", null: false
+    t.index ["tipo_eventos_id"], name: "index_eventos_on_tipo_eventos_id"
   end
 
   create_table "frequencia_eventos", force: :cascade do |t|
-    t.integer "id_pessoa"
-    t.integer "id_evento"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "pessoa_id", null: false
+    t.integer "evento_id", null: false
+    t.index ["evento_id"], name: "index_frequencia_eventos_on_evento_id"
+    t.index ["pessoa_id"], name: "index_frequencia_eventos_on_pessoa_id"
   end
 
   create_table "pessoas", force: :cascade do |t|
@@ -43,4 +46,7 @@ ActiveRecord::Schema.define(version: 2021_08_23_224420) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "eventos", "tipo_eventos", column: "tipo_eventos_id"
+  add_foreign_key "frequencia_eventos", "eventos"
+  add_foreign_key "frequencia_eventos", "pessoas"
 end

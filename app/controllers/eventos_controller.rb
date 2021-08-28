@@ -8,11 +8,14 @@ class EventosController < ApplicationController
 
   # GET /eventos/1 or /eventos/1.json
   def show
+    @tipo_eventos = TipoEvento.all
+    @pessoas = Pessoa.all
   end
 
   # GET /eventos/new
   def new
     @evento = Evento.new
+    @tipo_evento = TipoEvento.all
   end
 
   # GET /eventos/1/edit
@@ -22,7 +25,7 @@ class EventosController < ApplicationController
   # POST /eventos or /eventos.json
   def create
     @evento = Evento.new(evento_params)
-
+    
     respond_to do |format|
       if @evento.save
         format.html { redirect_to @evento, notice: "Evento was successfully created." }
@@ -64,6 +67,6 @@ class EventosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def evento_params
-      params.require(:evento).permit(:data, :id_tipo_evento, :descricao)
+      params.require(:evento).permit(:data, :tipo_eventos_id, :descricao)
     end
 end

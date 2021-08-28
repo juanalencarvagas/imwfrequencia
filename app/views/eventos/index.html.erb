@@ -16,7 +16,7 @@
     <% @eventos.each do |evento| %>
       <tr>
         <td><%= evento.data %></td>
-        <td><%= evento.id_tipo_evento %></td>
+        <td><%= evento.tipo_eventos_id %></td>
         <td><%= evento.descricao %></td>
         <td><%= link_to 'Show', evento %></td>
         <td><%= link_to 'Edit', edit_evento_path(evento) %></td>
