@@ -1,4 +1,16 @@
+
+<table>
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Tipo</th>
+    <th>Cargo</th>
+    <th>Status (F/P)</th>
+  </tr>
+</thead>
+
 <%= form_with(model: frequencia_evento) do |form| %>
+
   <% if frequencia_evento.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(frequencia_evento.errors.count, "error") %> prohibited this frequencia_evento from being saved:</h2>
@@ -11,22 +23,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :id_pessoa %>
-    <%= form.number_field :id_pessoa %>
-  </div>
+<tbody>
+  <% @pessoas.each do |pessoa| %>
+    <tr>
+      <td><%= pessoa.nome %>
+      <%= form.number_field :pessoa_id , value: pessoa.id %>
+      </td>
+      <td><%= pessoa.tipo %></td>
+      <td><%= pessoa.cargo %></td>
+      <!-- check_box -->
+      <td><%= form.text_field :status %></td>
 
-  <div class="field">
-    <%= form.label :id_evento %>
-    <%= form.number_field :id_evento %>
-  </div>
+  <% end %>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
-  </div>
+  <td>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit %>
+  
+  </td>
+ </tr>
+</tbody>
+
 <% end %>
+
+</table>
+

@@ -13,6 +13,7 @@ class FrequenciaEventosController < ApplicationController
   # GET /frequencia_eventos/new
   def new
     @frequencia_evento = FrequenciaEvento.new
+    @pessoas = Pessoa.all
   end
 
   # GET /frequencia_eventos/1/edit

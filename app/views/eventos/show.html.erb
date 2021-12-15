@@ -19,42 +19,4 @@
 <%= link_to 'Back', eventos_path %>
 
 
-<table>
-<thead>
-  <tr>
-    <th>Nome</th>
-    <th>Tipo</th>
-    <th>Cargo</th>
-    <th>Status (F/P)</th>
-  </tr>
-</thead>
-
-<%= form_with(model: @evento.frequencia_evento) do |form| %>
-<tbody>
-  <% @pessoas.each do |pessoa| %>
-    <tr>
-      <td><%= pessoa.nome %></td>
-      <td><%= pessoa.tipo %></td>
-      <td><%= pessoa.cargo %></td>
-      <!-- check_box -->
-      <td><%= form.text_field :status %></td>
-
-  <% end %>
-
-  <td>
-
-  <%= form.submit %>
-  
-  </td>
- </tr>
-</tbody>
-
-
-
-<% end %>
-
-
-
-
-</table>
-<%= link_to 'New Pessoa', new_pessoa_path %>
+<%= link_to 'New Frequencia', new_frequencia_evento_path(@evento) %>
